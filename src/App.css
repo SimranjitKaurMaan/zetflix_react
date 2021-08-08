@@ -1,8 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
-    background-color: rgb(221, 233, 243);
+    background-color: #141414;
+    color: #fff;
     margin: 0px;
     font-family: 'Helvetica Neue', sans-serif;
     margin-left: 1.5rem;
@@ -21,6 +21,10 @@ a {
     font-size: 1.2rem;
     font-weight: 100;
     padding-top: 1rem;
+}
+
+.row{
+    display: flex;
 }
 
 .row-content {
@@ -62,7 +66,6 @@ a {
 }
 
 .boxart-container {
-    background-color: cornflowerblue;
     border-radius: 0.3rem;
     max-width: fit-content;
     padding: 0.25rem;
@@ -72,6 +75,9 @@ a {
 
 .boxart-img {
     max-width: 230px;
+    min-width: 100px;
+    height: 10vh;
+    border-radius: 0.3rem;
 }
 
 
@@ -217,27 +223,27 @@ a {
 }
 
 .button-controls-container span.moreinfo-button {
-    background: url(/images/more-info.svg) no-repeat top left;
+    /* background: url(/images/more-info.svg) no-repeat top left; */
     background-size: contain;
 }
 
 .button-controls-container span.play-button {
-    background: url(/images/play.svg) no-repeat top left;
+    /* background: url(/images/play.svg) no-repeat top left; */
     background-size: contain;
 }
 
 .button-controls-container span.tick-button {
-    background: url(/images/tick.svg) no-repeat top left;
+    /* background: url(/images/tick.svg) no-repeat top left; */
     background-size: contain;
 }
 
 .button-controls-container span.like-button {
-    background: url(/images/like.svg) no-repeat top left;
+    /* background: url(/images/like.svg) no-repeat top left; */
     background-size: contain;
 }
 
 .button-controls-container span.unlike-button {
-    background: url(/images/unlike.svg) no-repeat top left;
+    /* background: url(/images/unlike.svg) no-repeat top left; */
     background-size: contain;
 }
 
@@ -277,7 +283,7 @@ a {
 }
 
 .social-links .facebook-link {
-    background: url(/images/facebook.svg) no-repeat top left;
+    /* background: url(/images/facebook.svg) no-repeat top left; */
     background-size: contain;
     border-radius: 0.5rem;
     background-color: #808080;
@@ -289,7 +295,7 @@ a {
 }
 
 .social-links .instagram-link {
-    background: url(/images/instagram.svg) no-repeat top left;
+    /* background: url(/images/instagram.svg) no-repeat top left; */
     background-size: contain;
     border-radius: 0.5rem;
     background-color: #808080;
@@ -301,7 +307,7 @@ a {
 }
 
 .social-links .twitter-link {
-    background: url(/images/twitter.svg) no-repeat top left;
+    /* background: url(/images/twitter.svg) no-repeat top left; */
     background-size: contain;
     border-radius: 0.5rem;
     background-color: #808080;
@@ -313,7 +319,7 @@ a {
 }
 
 .social-links .youtube-link {
-    background: url(/images/youtube.svg) no-repeat top left;
+    /* background: url(/images/youtube.svg) no-repeat top left; */
     background-size: contain;
     border-radius: 0.5rem;
     background-color: #808080;
