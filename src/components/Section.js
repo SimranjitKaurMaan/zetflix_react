@@ -3,9 +3,10 @@ import Card from './Card';
 
 const Section = ({genre}) => {
     const [moviesList,setMoviesList] = useState([]);
-
+    var encodedGenre = encodeURIComponent(genre)
+    console.log("inside section "+encodedGenre)
     const fetchData = async () => {
-      const moviesListResponse = await fetch(`.netlify/functions/getMoviesList?genre=${genre}`,{
+      const moviesListResponse = await fetch(`.netlify/functions/getMoviesList?genre=${encodedGenre}`,{
         method: "GET"
       })
       const moviesListResponseBody = await moviesListResponse.json()

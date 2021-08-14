@@ -2,8 +2,9 @@ const fetch = require('node-fetch')
 
 exports.handler = async function (event) {
     const genre = JSON.stringify(event.queryStringParameters.genre)
+    console.log("inside the getMoviesList " +genre);
     const movieGenreEndpoint = process.env.ASTRA_DB_ENDPOINT + "movie_genre/rows/query";
-    console.log(movieGenreEndpoint)
+    //console.log(movieGenreEndpoint)
     const query = `{
       "columnNames": [
         "title"
