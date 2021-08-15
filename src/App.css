@@ -88,10 +88,13 @@ a {
     z-index: 1;
 }
 
-.more-button{
-   width: 100px; 
-   height: 100px;
-   background-color: red;
+.handle{
+    background: black;
+    height: 100px;
+    width: 25px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
 }
 
 .row-content {

@@ -28,12 +28,12 @@ const Section = ({genre}) => {
         {moviesList && (<div className="row">
             <div className="row-content">
                 {moviesList.map((movie)=>(<Card movie={movie.title}/>))}
-            </div>
-        </div>)}
-        <div className="more-button" onClick={()=>{
+                <div className="handle inline-block" onClick={()=>{
           setCurrentPageState(currentPageState)
           fetchData()
         }}></div>
+            </div>
+        </div>)}
         </>
     )
 }
