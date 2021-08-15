@@ -22,7 +22,7 @@ exports.handler = async function (event) {
           ]
         }
       ],
-      "pageSize": 2,
+      "pageSize": 5,
       "pageState": ${pageState}
     }`
     const response = await fetch(movieGenreEndpoint, {

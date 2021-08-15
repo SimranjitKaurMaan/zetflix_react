@@ -8,14 +8,14 @@ const Card = ({movie}) => {
           method: "GET"
       })
       const moviesResponseBody = await moviesResponse.json()
-      // console.log("inside card responseBody: ",JSON.stringify(moviesResponseBody))
+      console.log("inside card after call: ",JSON.stringify(moviesResponseBody))
       setMoviesData(moviesResponseBody)
     }
    
  
     useEffect(()=>{
       fetchData();
-    },[])
+    },[movie])
 
     return (
         <>
