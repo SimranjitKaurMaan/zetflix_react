@@ -59,7 +59,7 @@ function App() {
             <li className="footer-link-wrapper"><a href="/">Contact Us</a></li>
 
         </ul>
-        <div className="footer-copyright">© 2020-2021 ZetFlix, Inc.
+        <div className="footer-copyright">© 2020-2021 ZetFlix, Inc. Created with ❤️ by simrk.
         </div>
     </div>
     </>

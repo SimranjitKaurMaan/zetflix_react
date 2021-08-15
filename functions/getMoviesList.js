@@ -1,10 +1,14 @@
-const fetch = require('node-fetch')
+const fetch = require('node-fetch');
 
 exports.handler = async function (event) {
     const genre = JSON.stringify(event.queryStringParameters.genre)
-    console.log("inside the getMoviesList " +genre);
+    var pageState = event.queryStringParameters.pageState
+    if (pageState.length>5) {
+      console.log("got not null value "+ pageState)
+      pageState= JSON.stringify(pageState)
+    }
     const movieGenreEndpoint = process.env.ASTRA_DB_ENDPOINT + "movie_genre/rows/query";
-    //console.log(movieGenreEndpoint)
+    
     const query = `{
       "columnNames": [
         "title"
@@ -17,7 +21,9 @@ exports.handler = async function (event) {
             ${genre}
           ]
         }
-      ]
+      ],
+      "pageSize": 2,
+      "pageState": ${pageState}
     }`
     const response = await fetch(movieGenreEndpoint, {
         method: 'POST',
@@ -31,10 +37,10 @@ exports.handler = async function (event) {
 
     try {
         const responseBody = await response.json();
-        // console.log(responseBody.rows)
+        console.log(responseBody)
         return {
             statusCode: 200,
-            body: JSON.stringify(responseBody.rows)
+            body: JSON.stringify(responseBody)
         }
     } catch (err) {
         console.log(err)

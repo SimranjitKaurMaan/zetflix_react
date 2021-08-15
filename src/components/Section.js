@@ -3,18 +3,21 @@ import Card from './Card';
 
 const Section = ({genre}) => {
     const [moviesList,setMoviesList] = useState([]);
+    const [currentPageState,setCurrentPageState] = useState(null);
     var encodedGenre = encodeURIComponent(genre)
-    console.log("inside section "+encodedGenre)
     const fetchData = async () => {
-      const moviesListResponse = await fetch(`.netlify/functions/getMoviesList?genre=${encodedGenre}`,{
+      const moviesListResponse = await fetch(`.netlify/functions/getMoviesList?genre=${encodedGenre}&pageState=${currentPageState}`,{
         method: "GET"
       })
       const moviesListResponseBody = await moviesListResponse.json()
-      setMoviesList(moviesListResponseBody)
-      console.log(moviesListResponseBody)
+      setMoviesList(moviesListResponseBody.rows)
+      setCurrentPageState(moviesListResponseBody.pageState)
+      //console.log("inside section "+moviesListResponseBody.pageState)
+      console.log('pageState inside section'+ currentPageState);
+      console.log("movies list inside section"+JSON.stringify(moviesList));
+      console.log("Genre :"+encodedGenre);
     }
    
- 
     useEffect(()=>{
       fetchData();
     },[])
@@ -27,6 +30,10 @@ const Section = ({genre}) => {
                 {moviesList.map((movie)=>(<Card movie={movie.title}/>))}
             </div>
         </div>)}
+        <div className="more-button" onClick={()=>{
+          setCurrentPageState(currentPageState)
+          fetchData()
+        }}></div>
         </>
     )
 }

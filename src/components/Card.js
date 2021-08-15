@@ -8,7 +8,7 @@ const Card = ({movie}) => {
           method: "GET"
       })
       const moviesResponseBody = await moviesResponse.json()
-      console.log("responseBody: ",JSON.stringify(moviesResponseBody))
+      // console.log("inside card responseBody: ",JSON.stringify(moviesResponseBody))
       setMoviesData(moviesResponseBody)
     }
    
