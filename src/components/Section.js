@@ -1,4 +1,4 @@
-import { useState , useEffect} from "react"
+  import { useState , useEffect} from "react"
 import Card from './Card';
 
 const Section = ({genre}) => {
@@ -20,7 +20,7 @@ const Section = ({genre}) => {
    
     useEffect(()=>{
       fetchData();
-    },[])
+    },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>

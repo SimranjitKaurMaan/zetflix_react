@@ -17,10 +17,10 @@ const Card = ({movie}) => {
  
     useEffect(()=>{
       fetchData();
-    },[movie])
+    },[movie]) // eslint-disable-line react-hooks/exhaustive-deps
     console.log("isShown "+ isShown);
     return (
-        <>
+        <>  
         <div className="boxart-container inline-block" onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}>
 
