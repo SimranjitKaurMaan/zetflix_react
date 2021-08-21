@@ -80,6 +80,9 @@ a {
     border-radius: 0.3rem;
 }
 
+ video::-webkit-media-controls{
+   display: none;
+ }
 
  .boxart-container:focus,
  .boxart-container:hover{
@@ -163,14 +166,11 @@ a {
 }
 
 .modal-container {
-    background-color: cornflowerblue;
+    background-color: black;
     max-width: fit-content;
     border-radius: 0.5rem;
     cursor: pointer;
-}
-
-.modal-img {
-    width: 300px;
+    padding-bottom: 1rem;
 }
 
 .modal-info-container {
@@ -199,8 +199,8 @@ a {
 }
 
 .button-controls-container {
-    margin: 1rem;
     padding-top: 1rem;
+    padding-left: 1rem;
     line-height: 1.2;
 }
 
@@ -219,6 +219,11 @@ a {
     cursor: pointer;
 }
 
+.modal-container video{
+    width: 300px;
+    display:block;
+    margin: 0 auto;
+}
 
 .button-controls-container .secondary-button {
     background-color: rgba(255, 255, 255, .7);
@@ -237,22 +242,22 @@ a {
 }
 
 .button-controls-container span.play-button {
-    /* background: url(/images/play.svg) no-repeat top left; */
+    background: url(./images/play.svg) no-repeat top left;
     background-size: contain;
 }
 
 .button-controls-container span.tick-button {
-    /* background: url(/images/tick.svg) no-repeat top left; */
+    background: url(./images/tick.svg) no-repeat top left;
     background-size: contain;
 }
 
 .button-controls-container span.like-button {
-    /* background: url(/images/like.svg) no-repeat top left; */
+    background: url(./images/like.svg) no-repeat top left;
     background-size: contain;
 }
 
 .button-controls-container span.unlike-button {
-    /* background: url(/images/unlike.svg) no-repeat top left; */
+    background: url(./images/unlike.svg) no-repeat top left;
     background-size: contain;
 }
 
@@ -292,7 +297,7 @@ a {
 }
 
 .social-links .facebook-link {
-    /* background: url(/images/facebook.svg) no-repeat top left; */
+    background: url(./images/facebook.svg) no-repeat top left;
     background-size: contain;
     border-radius: 0.5rem;
     background-color: #808080;
@@ -304,7 +309,7 @@ a {
 }
 
 .social-links .instagram-link {
-    /* background: url(/images/instagram.svg) no-repeat top left; */
+    background: url(./images/instagram.svg) no-repeat top left;
     background-size: contain;
     border-radius: 0.5rem;
     background-color: #808080;
@@ -316,7 +321,7 @@ a {
 }
 
 .social-links .twitter-link {
-    /* background: url(/images/twitter.svg) no-repeat top left; */
+    background: url(./images/twitter.svg) no-repeat top left;
     background-size: contain;
     border-radius: 0.5rem;
     background-color: #808080;
@@ -328,7 +333,7 @@ a {
 }
 
 .social-links .youtube-link {
-    /* background: url(/images/youtube.svg) no-repeat top left; */
+    background: url(./images/youtube.svg) no-repeat top left;
     background-size: contain;
     border-radius: 0.5rem;
     background-color: #808080;
