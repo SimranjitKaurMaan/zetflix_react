@@ -4,13 +4,14 @@ import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/NavBar';
 import Section from './components/Section';
-const host = process.env.hasOwnProperty('URL') ? process.env.URL : 'http://localhost:8888/';
+const host = process.env.hasOwnProperty('URL') ? process.env.URL : 'https://zetflixclone.netlify.app/';
 
 function App() {
    const [genres,setGenres] = useState(null);
 
    const fetchData = async () => {
      console.log("host:" , host)
+     console.log("url: ",`${host}.netlify/functions/getGenres`)
      const response = await fetch(`${host}.netlify/functions/getGenres`)
      const responseBody = await response.json()
      setGenres(responseBody)

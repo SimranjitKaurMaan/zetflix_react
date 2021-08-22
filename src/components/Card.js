@@ -1,5 +1,5 @@
 import { useState , useEffect} from "react"
-const host = process.env.hasOwnProperty('URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
+const host = process.env.hasOwnProperty('URL') ? process.env.DEPLOY_URL : 'https://zetflixclone.netlify.app/';
 
 const Card = ({movie}) => {
     const [moviesData,setMoviesData] = useState('');

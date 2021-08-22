@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const host = process.env.hasOwnProperty('URL') ? process.env.URL : 'http://localhost:8888/';
+const host = process.env.hasOwnProperty('URL') ? process.env.URL : 'https://zetflixclone.netlify.app/';
 
 const HeroSection = () =>{
     const [heroData, setHeroData] = useState('');
