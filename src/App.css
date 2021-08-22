@@ -83,6 +83,7 @@ a {
      width: 250px;
      background-color: black;
  }
+
  video::-webkit-media-controls{
    display: none;
  }
@@ -241,7 +242,7 @@ a {
 }
 
 .button-controls-container span.moreinfo-button {
-    /* background: url(/images/more-info.svg) no-repeat top left; */
+    background: url(./images/more-info.svg) no-repeat top left;
     background-size: contain;
 }
 
