@@ -7,7 +7,7 @@ const Card = ({movie}) => {
 
     console.log('inside card', movie)
     const fetchData = async () => {
-      const moviesResponse = await fetch(`${host}.netlify/functions/getMoviesData?movie=${movie}`,{
+      const moviesResponse = await fetch(`/.netlify/functions/getMoviesData?movie=${movie}`,{
           method: "GET"
       })
       const moviesResponseBody = await moviesResponse.json()

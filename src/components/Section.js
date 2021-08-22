@@ -6,7 +6,7 @@ const Section = ({genre}) => {
     const [currentPageState,setCurrentPageState] = useState(null);
     var encodedGenre = encodeURIComponent(genre)
     const fetchData = async () => {
-      const moviesListResponse = await fetch(`${host}.netlify/functions/getMoviesList?genre=${encodedGenre}&pageState=${currentPageState}`,{
+      const moviesListResponse = await fetch(`/.netlify/functions/getMoviesList?genre=${encodedGenre}&pageState=${currentPageState}`,{
         method: "GET"
       })
       const moviesListResponseBody = await moviesListResponse.json()
