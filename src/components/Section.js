@@ -1,12 +1,12 @@
   import { useState , useEffect} from "react"
-import Card from './Card';
-
+  import Card from './Card';
+  const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
 const Section = ({genre}) => {
     const [moviesList,setMoviesList] = useState([]);
     const [currentPageState,setCurrentPageState] = useState(null);
     var encodedGenre = encodeURIComponent(genre)
     const fetchData = async () => {
-      const moviesListResponse = await fetch(`.netlify/functions/getMoviesList?genre=${encodedGenre}&pageState=${currentPageState}`,{
+      const moviesListResponse = await fetch(`${host}.netlify/functions/getMoviesList?genre=${encodedGenre}&pageState=${currentPageState}`,{
         method: "GET"
       })
       const moviesListResponseBody = await moviesListResponse.json()

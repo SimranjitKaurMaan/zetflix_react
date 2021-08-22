@@ -1,4 +1,5 @@
 import { useState , useEffect} from "react"
+const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
 
 const Card = ({movie}) => {
     const [moviesData,setMoviesData] = useState('');
@@ -6,7 +7,7 @@ const Card = ({movie}) => {
 
     console.log('inside card', movie)
     const fetchData = async () => {
-      const moviesResponse = await fetch(`.netlify/functions/getMoviesData?movie=${movie}`,{
+      const moviesResponse = await fetch(`${host}.netlify/functions/getMoviesData?movie=${movie}`,{
           method: "GET"
       })
       const moviesResponseBody = await moviesResponse.json()
