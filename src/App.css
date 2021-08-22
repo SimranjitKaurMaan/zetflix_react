@@ -173,7 +173,8 @@ a {
     max-width: fit-content;
     border-radius: 0.5rem;
     cursor: pointer;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .modal-info-container {
