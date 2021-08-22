@@ -1,6 +1,6 @@
   import { useState , useEffect} from "react"
   import Card from './Card';
-  const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
+  //const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
 const Section = ({genre}) => {
     const [moviesList,setMoviesList] = useState([]);
     const [currentPageState,setCurrentPageState] = useState(null);

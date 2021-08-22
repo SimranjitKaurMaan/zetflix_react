@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/NavBar';
 import Section from './components/Section';
-const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
+//const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
 
 function App() {
    const [genres,setGenres] = useState(null);

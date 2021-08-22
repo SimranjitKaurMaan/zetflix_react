@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
+//const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
 
 const HeroSection = () =>{
     const [heroData, setHeroData] = useState('');
