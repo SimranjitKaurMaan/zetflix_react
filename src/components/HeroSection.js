@@ -5,8 +5,9 @@ const HeroSection = () =>{
     const [heroData, setHeroData] = useState('');
 
     const fetchData = async () => {
+        var url = new URL(`.netlify/functions/getMoviesData?movie=Finding Nemo`,host)
         console.log("inside hero section")
-        const moviesResponse = await fetch(`${host}.netlify/functions/getMoviesData?movie=Finding Nemo`,{
+        const moviesResponse = await fetch(url,{
             method: "GET"
         })
         const movieResponseBody = await moviesResponse.json()

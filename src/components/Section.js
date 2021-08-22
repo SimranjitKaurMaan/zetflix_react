@@ -5,8 +5,9 @@ const Section = ({genre}) => {
     const [moviesList,setMoviesList] = useState([]);
     const [currentPageState,setCurrentPageState] = useState(null);
     var encodedGenre = encodeURIComponent(genre)
+    var url = new URL(`.netlify/functions/getMoviesList?genre=${encodedGenre}&pageState=${currentPageState}`,host)
     const fetchData = async () => {
-      const moviesListResponse = await fetch(`${host}.netlify/functions/getMoviesList?genre=${encodedGenre}&pageState=${currentPageState}`,{
+      const moviesListResponse = await fetch(url,{
         method: "GET"
       })
       const moviesListResponseBody = await moviesListResponse.json()
@@ -14,8 +15,8 @@ const Section = ({genre}) => {
       setCurrentPageState(moviesListResponseBody.pageState)
       //console.log("inside section "+moviesListResponseBody.pageState)
       console.log('pageState inside section'+ currentPageState);
-      console.log("movies list inside section"+JSON.stringify(moviesList));
-      console.log("Genre :"+encodedGenre);
+      console.log("movies list inside section"+ JSON.stringify(moviesList));
+      console.log("Genre :"+ encodedGenre);
     }
    
     useEffect(()=>{

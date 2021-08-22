@@ -11,8 +11,9 @@ function App() {
 
    const fetchData = async () => {
      console.log("host:" , host)
+     var url = new URL(`.netlify/functions/getGenres`,host)
      console.log("url: ",`${host}.netlify/functions/getGenres`)
-     const response = await fetch(`${host}.netlify/functions/getGenres`)
+     const response = await fetch(url)
      const responseBody = await response.json()
      setGenres(responseBody)
    }
