@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-//const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
+const host = process.env.hasOwnProperty('DEPLOY_URL') ? process.env.DEPLOY_URL : 'http://localhost:8888/';
 
 const HeroSection = () =>{
     const [heroData, setHeroData] = useState('');
 
     const fetchData = async () => {
         console.log("inside hero section")
-        const moviesResponse = await fetch(`/.netlify/functions/getMoviesData?movie=Finding Nemo`,{
+        const moviesResponse = await fetch(`${host}.netlify/functions/getMoviesData?movie=Finding Nemo`,{
             method: "GET"
         })
         const movieResponseBody = await moviesResponse.json()
