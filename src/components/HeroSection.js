@@ -21,7 +21,7 @@ const HeroSection = () =>{
   return (    
     <>
     <div className="hero-image-container">
-        <video controls autoPlay={true} loop className="hero-image" src={heroData.thumbnail} type="video/mp4"/>
+        <video muted controls autoPlay={true} loop className="hero-image" src={heroData.thumbnail} type="video/mp4"/>
         <div className="metainfo-layer">
             <div className="logo-and-text">
                 <div className="logo">{heroData.title}</div>

@@ -10,6 +10,7 @@ function App() {
    const [genres,setGenres] = useState(null);
 
    const fetchData = async () => {
+     console.log("host:" , host)
      const response = await fetch(`${host}.netlify/functions/getGenres`)
      const responseBody = await response.json()
      setGenres(responseBody)
