@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/NavBar';
 import Section from './components/Section';
-const host = process.env.hasOwnProperty('URL') ? process.env.URL : 'https://zetflixclone.netlify.app/';
+const host = process.env.hasOwnProperty('URL') ? process.env.URL : 'http://localhost:8888/';
 
 function App() {
    const [genres,setGenres] = useState(null);

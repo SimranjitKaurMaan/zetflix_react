@@ -1,6 +1,6 @@
   import { useState , useEffect} from "react"
   import Card from './Card';
-  const host = process.env.hasOwnProperty('URL') ? process.env.URL : 'https://zetflixclone.netlify.app/';
+  const host = process.env.hasOwnProperty('URL') ? process.env.URL : 'http://localhost:8888/';
 const Section = ({genre}) => {
     const [moviesList,setMoviesList] = useState([]);
     const [currentPageState,setCurrentPageState] = useState(null);
