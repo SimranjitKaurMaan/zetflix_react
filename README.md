@@ -8,4 +8,7 @@ To Run this App locally:
 3. 👩‍💻 Run the project using
     `netlify dev`
 
+Here is the Demo below. 
+
+![](demo.gif)
 
