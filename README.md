@@ -10,5 +10,3 @@ To Run this App locally:
 
 Here is the Demo below. 
 
-![](demo.gif)
-
